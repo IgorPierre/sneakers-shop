@@ -1,12 +1,12 @@
 import bannerImg from "../../assets/images/banner-img.png"
 import { Button } from "../Button"
-import { BannerArea } from "./styles"
+import { BannerArea, ProductImage } from "./styles"
 
 function Banner() {
 
     return(
         <BannerArea>
-            <img src={bannerImg} alt="imagem do baner"/>
+            <ProductImage src={bannerImg} alt="imagem do baner"/>
 
             <div>
                 <h2>Grandes marcas</h2>

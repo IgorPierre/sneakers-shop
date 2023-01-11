@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const BannerArea = styled.section`
     display: flex;
     justify-content: center;
@@ -8,15 +7,8 @@ export const BannerArea = styled.section`
 
     width: 100%; 
     padding: 8rem 50px 4rem 50px;
-
-    img {
-        width: 40%;
-        transition: 0.6s;
-
-        &:hover {
-            transform: rotate(20deg);
-        }
-    }
+    
+    box-shadow: inset #F2AA6B 0 -0.3rem;
 
     div {
         color: #393E59;
@@ -35,5 +27,14 @@ export const BannerArea = styled.section`
 
     p {
         font-size: 1.2rem;
+    }
+`
+
+export const ProductImage = styled.img`
+    width: 40%;
+    transition: 0.6s;
+
+    &:hover {
+        transform: rotate(10deg);
     }
 `
