@@ -1,9 +1,19 @@
 import './App.css'
+import Banner from './components/Banner'
+
+import Header from './components/Header'
+import Products from './components/Products'
 
 function App() {
   return (
     <div className="App">
-      <h1>olá mundo</h1>
+      <>
+        <Header />
+
+        <Banner />
+
+        <Products />
+      </>
     </div>
   )
 }
