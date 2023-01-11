@@ -30,6 +30,12 @@ export const ProductsArea = styled.section`
         align-items: center;
         padding: 50px 20px;
 
+        transition: 0.3s;
+
+        &:hover {
+            box-shadow: inset #393E59 0 -0.3rem;
+        }
+
         img {
             width: 300px;
         }

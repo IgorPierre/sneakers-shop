@@ -73,7 +73,7 @@ export const Navigator = styled.nav`
     a {
         text-decoration: none;
         font-size: 18px;
-        font-weight: 700;
+        font-weight: 400;
         color: #393E59;
 
         transition: 0.3s;

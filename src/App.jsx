@@ -1,8 +1,6 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
-import Banner from './components/Banner'
-
 import Header from './components/Header'
-import Products from './components/Products'
 
 function App() {
   return (
@@ -10,9 +8,7 @@ function App() {
       <>
         <Header />
 
-        <Banner />
-
-        <Products />
+        <Outlet />
       </>
     </div>
   )

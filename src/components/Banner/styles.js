@@ -35,6 +35,6 @@ export const ProductImage = styled.img`
     transition: 0.6s;
 
     &:hover {
-        transform: rotate(10deg);
+        transform: rotate(${props => props.rot ? `${props.rot}` : "-8deg"});
     }
 `

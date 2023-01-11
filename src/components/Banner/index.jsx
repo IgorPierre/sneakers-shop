@@ -6,7 +6,7 @@ function Banner() {
 
     return(
         <BannerArea>
-            <ProductImage src={bannerImg} alt="imagem do baner"/>
+            <ProductImage rot="10deg" src={bannerImg} alt="imagem do baner"/>
 
             <div>
                 <h2>Grandes marcas</h2>
