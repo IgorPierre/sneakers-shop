@@ -21,29 +21,31 @@ export const ProductsArea = styled.section`
         width: 100%;
         padding: 3rem 0;
     }
+`
 
-    li {
-        background-color: #FFF;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 50px 20px;
+export const Product = styled.li`
+    background-color: #FFF;
+    display: flex;
+    flex-direction: ${props => props.row ? "row" : "column"};
+    justify-content: space-between;
+    align-items: center;
 
-        transition: 0.3s;
+    max-width: 600px;
+    padding: 50px 20px;
 
-        &:hover {
-            box-shadow: inset #393E59 0 -0.3rem;
-        }
+    transition: 0.3s;
 
-        img {
-            width: 300px;
-        }
+    &:hover {
+       box-shadow: inset #393E59 0 -0.3rem;
+    }
 
-        h3 {
-            font-size: 1rem;
-            padding: 20px 0;
-        }
+    img {
+        width: 300px;
+    }
+
+    h3 {
+        font-size: 1rem;
+        padding: 20px 0;
     }
 `
 

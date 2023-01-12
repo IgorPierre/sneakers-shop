@@ -2,22 +2,23 @@ import logoImg from "../../assets/images/sneaker-logo.png"
 import { FaSearch } from "react-icons/fa"
 import { TiShoppingCart } from "react-icons/ti"
 import { Cart, HeaderArea, Logo, Navigator, SearchArea } from "./styles"
+import { Link } from "react-router-dom"
 
 function Header() {
     return(
         <HeaderArea>
             <Logo>
-                <img src={logoImg} alt="logo da sneakers" />
+                <img href="/" src={logoImg} alt="logo da sneakers" />
             </Logo>
 
             <SearchArea>
                 <input type="text" placeholder="Pesquisar por tênis"/>
-                <a href=""><FaSearch /></a>
+                <Link to={"/"}><FaSearch /></Link>
             </SearchArea>
 
             <Cart>
                 <span>0</span>
-                <TiShoppingCart />
+                <Link to={"/cart"}><TiShoppingCart /></Link>
             </Cart>
 
             <Navigator>

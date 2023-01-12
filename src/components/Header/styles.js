@@ -47,6 +47,7 @@ export const SearchArea = styled.div`
         border-radius: 0 10px 10px 0;
 
         transition: 0.3s;
+        cursor: pointer;
 
         &:hover {
             background-color: #F2AA6B;

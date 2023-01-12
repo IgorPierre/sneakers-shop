@@ -12,6 +12,7 @@ import './index.css'
 //Pages
 import Home from './pages/Home';
 import Details from './pages/Details';
+import Cart from './pages/Cart';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/details",
         element: <Details />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },
