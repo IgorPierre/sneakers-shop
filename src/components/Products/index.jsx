@@ -1,33 +1,37 @@
-import { Product, ProductsArea, Title } from "./styles"
+import { useState, useEffect } from "react";
 
-//Images
-import img1 from "../../assets/images/1.png"
-import img2 from "../../assets/images/2.png"
-import img3 from "../../assets/images/3.png"
+import { Product, ProductsArea, Title } from "./styles"
 import { ProductImage } from "../Banner/styles"
 
 import { Button } from "../Button"
 import { Link } from "react-router-dom"
+import Axios from "axios"
+
+//Images
+import generalpurposeshoe from "../../assets/images/generalpurposeshoe.webp"
+import boost350 from "../../assets/images/boost350.png"
+import wmmnsdunklow from "../../assets/images/wmmnsdunklow.png"
+import midse from "../../assets/images/midse.webp"
+import boost700 from "../../assets/images/boost700.png"
+import s5retro from "../../assets/images/s5retro.webp"
 
 function Products() {
+    const [productsList, setProductsList] = useState([])
 
-    const productsList = [
-        {
-            name: "Tênis Yezzy", 
-            image: img1,
-            price: "1.129,00"
-        },
-        {
-            name: "Tênis Yezzy", 
-            image: img2,
-            price: "1.599,00"
-        },
-        {
-            name: "Tênis Nike", 
-            image: img3,
-            price: "1.399,00"
-        }
-    ]
+    useEffect(()=>{
+        Axios.get("http://localhost:3001/getProducts").then((response) =>{
+            setProductsList(response.data)
+        })
+    }, [])
+
+    function searchImage(name) {
+        if(name === "generalpurposeshoe") return generalpurposeshoe
+        else if(name === "boost350v2") return boost350 
+        else if(name === "midse") return midse
+        else if(name === "s5retro") return s5retro
+        else if(name === "wmmnsdunklow") return wmmnsdunklow
+        else if(name === "boost700") return boost700
+    }
 
     return(
         <ProductsArea>
@@ -36,8 +40,8 @@ function Products() {
             <ul>
                 {productsList.map(product => {
                     return(
-                        <Product>
-                            <ProductImage src={product.image} alt="" />
+                        <Product key={product.id}>
+                            <ProductImage src={searchImage(product.image)} alt="imagem do produto"/>
                             <h3>{product.name}</h3>
                             <span><strong>R$ </strong>{product.price}</span>
                             <Link to={"/details"}>

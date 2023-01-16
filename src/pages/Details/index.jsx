@@ -3,7 +3,6 @@ import { DetailsArea, ProductInfo } from "./styles"
 
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai"
 
-import img from "../../assets/images/1.png"
 import { Title } from "../../components/Products/styles"
 import { Button, Quantity } from "../../components/Button"
 import { useState } from "react"
@@ -14,7 +13,6 @@ function Details() {
 
     return(
         <DetailsArea>
-            <ProductImage rot={"0"} src={img} alt="imagem do produto"></ProductImage>
 
             <ProductInfo>
                 <Title>Tênis YEZZY</Title>
