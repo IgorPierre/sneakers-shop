@@ -44,7 +44,7 @@ function Products() {
                             <ProductImage src={searchImage(product.image)} alt="imagem do produto"/>
                             <h3>{product.name}</h3>
                             <span><strong>R$ </strong>{product.price}</span>
-                            <Link to={"/details"}>
+                            <Link to={`/details/${product.id}`}>
                                 <Button>VER DETALHES</Button>
                             </Link>
                         </Product>

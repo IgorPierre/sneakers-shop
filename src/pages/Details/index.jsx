@@ -1,23 +1,32 @@
-import { ProductImage } from "../../components/Banner/styles"
+
 import { DetailsArea, ProductInfo } from "./styles"
 
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai"
 
 import { Title } from "../../components/Products/styles"
 import { Button, Quantity } from "../../components/Button"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import Axios from "axios"
 
 function Details() {
 
+    const params = useParams()
+
+    const [product, setProduct] = useState([])
     const [quantity, setQuantity] = useState(0)
+
+    useEffect(()=>{
+        Axios.get(`http://localhost:3001//get`).then((response) =>{
+            setProduct(response.data)
+        })
+    }, [])
 
     return(
         <DetailsArea>
-
             <ProductInfo>
-                <Title>Tênis YEZZY</Title>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ullam aspernatur voluptatem nostrum culpa, in maiores autem eius ipsa amet eligendi tenetur delectus quam voluptatibus ratione, odit nihil doloribus! Eligendi!</p>
-                <span><strong>R$</strong> 1.129,00</span>
+                <Title>{product.title}</Title>
+                <span><strong>R$</strong> {product.price}</span>
                 <div>
                     <Quantity>
                         <span onClick={() => setQuantity(quantity === 0 ? quantity-0 : quantity-1)}><AiOutlineMinus /></span>

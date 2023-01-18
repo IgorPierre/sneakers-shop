@@ -10,6 +10,8 @@ const db = mysql.createPool({
     database: "sneakersshop",
 });
 
+let value = 3
+
 app.use(cors());
 app.use(express.json());
 

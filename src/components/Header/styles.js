@@ -60,6 +60,10 @@ export const Cart = styled.div`
     font-size: 2rem;
     text-align: center;
 
+    a{
+        color: #393E59;
+    }
+
     span {
         font-size: 1rem;
     }
