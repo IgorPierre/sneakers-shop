@@ -9,8 +9,6 @@ Trata-se da interface de um pequeno e-commerce de tênis, onde o usuário pode v
 ## :rocket: Tecnologias usadas:
 <p align="center">
   <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" alt="react"  width="70" height="70"/>
-
-  <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg" alt="react"  width="70" height="70"/>
 </p>
 <br>
 
