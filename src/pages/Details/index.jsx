@@ -1,42 +1,75 @@
+//Data
+import products_data from "../../../products";
 
-import { DetailsArea, ProductInfo } from "./styles"
+//Hooks
+import { Link, useParams } from "react-router-dom"
+import { useState } from "react";
 
+//Components
+import { DetailsArea, DetailsContent } from "./styles"
+import { Button, Quantity } from "../../components/Button";
+
+//Images
+import generalpurposeshoe from "../../assets/images/generalpurposeshoe.webp"
+import boost350 from "../../assets/images/boost350.png"
+import wmmnsdunklow from "../../assets/images/wmmnsdunklow.png"
+import midse from "../../assets/images/midse.webp"
+import boost700 from "../../assets/images/boost700.png"
+import s5retro from "../../assets/images/s5retro.webp"
+
+//Icons
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai"
+import { ImArrowLeft  } from "react-icons/im"
 
-import { Title } from "../../components/Products/styles"
-import { Button, Quantity } from "../../components/Button"
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import Axios from "axios"
+function Details(){
 
-function Details() {
+    const {id} = useParams()
+    const product = products_data[id-1]
 
-    const params = useParams()
+    const [quantityValue, setQuantityValue] = useState(0)
 
-    const [product, setProduct] = useState([])
-    const [quantity, setQuantity] = useState(0)
+    function addProduct() {
+        return setQuantityValue(quantityValue + 1)
+    }
 
-    useEffect(()=>{
-        Axios.get(`http://localhost:3001//get`).then((response) =>{
-            setProduct(response.data)
-        })
-    }, [])
+    function removeProduct() {
+        if(quantityValue > 0){
+            return setQuantityValue(quantityValue - 1)
+        }
+    }
+
+    function searchImage(name) {
+        if(name === "generalpurposeshoe") return generalpurposeshoe
+        else if(name === "boost350v2") return boost350 
+        else if(name === "midse") return midse
+        else if(name === "s5retro") return s5retro
+        else if(name === "wmmnsdunklow") return wmmnsdunklow
+        else if(name === "boost700") return boost700
+    }
 
     return(
         <DetailsArea>
-            <ProductInfo>
-                <Title>{product.title}</Title>
-                <span><strong>R$</strong> {product.price}</span>
-                <div>
-                    <Quantity>
-                        <span onClick={() => setQuantity(quantity === 0 ? quantity-0 : quantity-1)}><AiOutlineMinus /></span>
-                        <input type="text" value={quantity} onChange={(e) => setQuantity(e.target.value)}/>
-                        <span onClick={() => setQuantity(quantity+1)}><AiOutlinePlus /></span>
-                    </Quantity>
+            
+            <Link to={"/"}>
+                <ImArrowLeft/>
+            </Link>
 
+            <img src={searchImage(product.image)} />
+
+            <DetailsContent>
+                <h3>{product.name}</h3>
+                <p>{product.description}</p>
+                <span><strong>R$ </strong>{product.price}</span>
+
+                <div className="quantity-area">
+                    <Quantity>
+                        <span onClick={removeProduct}><AiOutlineMinus/></span>
+                        <input type="text" value={quantityValue}/>
+                        <span onClick={addProduct}><AiOutlinePlus/></span>
+                    </Quantity>
                     <Button>ADICIONAR</Button>
                 </div>
-            </ProductInfo>
+            </DetailsContent>  
         </DetailsArea>
     )
 }

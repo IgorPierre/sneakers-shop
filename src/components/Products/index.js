@@ -21,6 +21,7 @@ export const ProductsArea = styled.section`
         width: 100%;
         padding: 3rem 0;
     }
+
 `
 
 export const Product = styled.li`
@@ -52,4 +53,48 @@ export const Product = styled.li`
 export const Title = styled.h2`
     color: ${props => props.primary ? "#F2F2F2" : "#393E59"};
     font-size: 2rem;
+`
+
+export const DetailsArea = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    width: 100%;
+    padding: 5rem;
+`
+
+export const ProductInfo = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+
+    .description-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 40%;
+        p {
+        margin: 1rem 0;
+        }
+
+        span {
+            margin: 1rem 0;
+        }
+
+        input {
+            background-color: #F2F2F2;
+            color: #393E59;
+            font-size: 18px;
+            font-weight: 700;
+
+            border: none;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+
 `

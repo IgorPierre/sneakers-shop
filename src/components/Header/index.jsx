@@ -8,7 +8,7 @@ function Header() {
     return(
         <HeaderArea>
             <Logo>
-                <img href="/" src={logoImg} alt="logo da sneakers" />
+                <Link to={"/"}><img src={logoImg} alt="logo da sneakers" /></Link>
             </Logo>
 
             <SearchArea>

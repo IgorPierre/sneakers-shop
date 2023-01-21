@@ -8,7 +8,7 @@ export const BannerArea = styled.section`
     width: 100%; 
     padding: 8rem 50px 4rem 50px;
     
-    box-shadow: inset #F2AA6B 0 -0.3rem;
+    box-shadow: inset #F2AA6B 0 -0.2rem;
 
     div {
         color: #393E59;
@@ -28,6 +28,19 @@ export const BannerArea = styled.section`
     p {
         font-size: 1.2rem;
     }
+
+    @media(max-width: 980px){
+        flex-direction: column;
+        padding: 8rem 0 3rem 0;
+
+        div {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
 `
 
 export const ProductImage = styled.img`
@@ -37,4 +50,9 @@ export const ProductImage = styled.img`
     &:hover {
         transform: rotate(${props => props.rot ? `${props.rot}` : "-8deg"});
     }
+
+    @media(max-width: 980px){
+        width: 70%;
+    }
+
 `

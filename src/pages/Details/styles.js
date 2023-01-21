@@ -1,41 +1,61 @@
 import styled from "styled-components";
 
-export const DetailsArea = styled.div`
+export const DetailsArea = styled.section`
+    background-color: #FFF;
+
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    
 
     width: 100%;
     min-height: 100vh;
-    padding: 8rem 4rem 3rem 4rem;
+
+    a {
+        font-size: 2rem;
+        color: #393E59;
+        position: absolute;
+        top: 8rem;
+        left: 2rem;
+        transition: 0.3s;
+
+        &:hover {
+            color: #F2AA6B;
+        }
+    }
+
     img {
-        max-width: 400px;
+        width: 500px;
+    }
+
+    @media(max-width: 980px) {
+        flex-direction: column;
+
+        img {
+            width: 200px;
+            padding-bottom: 4rem;
+        }
     }
 `
 
-export const ProductInfo = styled.div`
+export const DetailsContent = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: justify;
     width: 40%;
-
-    padding: 0.5rem 3rem;
+    margin-left: 5rem;
 
     p {
-        margin: 1rem 0;
+        padding: 1rem 0;
     }
 
-    input {
-        background-color: #F2F2F2;
-        color: #393E59;
-        font-size: 18px;
-        font-weight: 700;
-
-        border: none;
-        padding: 5px;
-        max-width: 50px;
-        text-align: center;
+    .quantity-area {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 100%;
     }
+
+    @media(max-width: 980px) {
+        width: 80%;
+    }
+
 `

@@ -21,13 +21,28 @@ export const Button = styled.button`
 `
 
 export const Quantity = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
     background-color: #F2F2F2;
     color: #393E59;
-    display: inline;
+    text-align: center;
+    border: #393E59 2px solid;
+    padding: 5px 1rem;
 
-    border: #393E59 1px solid;
-    padding: 6px 2rem;
-    margin-right: 1rem;
+    width: 30%;
+
+    input {
+        background-color: #F2F2F2;
+        color: #393E59;
+        font-size: 1rem;
+        font-weight: 700;
+
+        max-width: 50px;
+        text-align: center;
+        border: none;
+    }
 
     span {
         cursor: pointer;

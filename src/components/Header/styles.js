@@ -10,6 +10,11 @@ export const HeaderArea = styled.header`
 
     width: 100%;
     padding: 10px 4rem;
+
+    @media(max-width: 980px){
+        padding: 10px 1rem;
+
+    }
 `
 
 export const Logo = styled.a`
@@ -17,6 +22,12 @@ export const Logo = styled.a`
 
     img {
         width: 150px;
+    }
+
+    @media(max-width: 980px) {
+        img {
+            width: 100px;
+        }
     }
 ` 
 
@@ -53,6 +64,11 @@ export const SearchArea = styled.div`
             background-color: #F2AA6B;
         }
     }
+
+    @media(max-width: 980px) {
+        width: 50%;
+    }
+
 `
 
 export const Cart = styled.div`
@@ -86,5 +102,9 @@ export const Navigator = styled.nav`
         &:hover {
             color: #F2AA6B;
         }
+    }
+
+    @media(max-width: 980px) {
+        display: none;
     }
 `
