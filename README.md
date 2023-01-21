@@ -2,7 +2,7 @@
 
 
 ## :pushpin: Sobre este projeto:
-Trata-se de um pequeno e-commerce de tênis de marca, onde o usuário pode visualizar e adicionar vários modelos ao carrinho. Foi desenvolvido com ReactJs + Styled-Components e MySQL.
+Trata-se da interface de um pequeno e-commerce de tênis, onde o usuário pode visualizar e adicionar vários modelos ao carrinho. Foi desenvolvido com ReactJs + Styled-Components ondo foram aplicados os coneitos de responsividade.
 
 <br>
 
