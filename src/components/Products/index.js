@@ -15,8 +15,14 @@ export const ProductsArea = styled.section`
         column-gap: 1rem;
         row-gap: 3rem;
         justify-items: center;
+        align-items: center;
         width: 100%;
         padding: 3rem 0;
+    }
+
+    @media(max-width: 980px){
+        padding: 0;
+
     }
 
 `

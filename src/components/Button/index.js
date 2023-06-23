@@ -29,9 +29,13 @@ export const Quantity = styled.div`
     color: #393E59;
     text-align: center;
     border: #393E59 2px solid;
-    padding: 4px 1rem;
+    padding: 4px;
 
-    width: 30%;
+    width: 40%;
+
+    span {
+        margin-left: 2px;
+    }
 
     input {
         background-color: #F2F2F2;

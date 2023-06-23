@@ -30,10 +30,11 @@ export const DetailsArea = styled.section`
 
     @media(max-width: 980px) {
         flex-direction: column;
-        
+        padding-top: 7rem;
+
         img {
             width: 100%;
-            max-width: 380px;
+            max-width: 320px;
             padding-bottom: 0;
             margin: 0;
         }
