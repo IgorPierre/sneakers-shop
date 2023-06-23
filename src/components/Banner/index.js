@@ -45,14 +45,25 @@ export const BannerArea = styled.section`
 
 export const ProductImage = styled.img`
     width: 40%;
-    transition: 0.6s;
+    transition: 1s;
 
     &:hover {
-        transform: rotate(${props => props.rot ? `${props.rot}` : "-8deg"});
+        animation: rotation 1.5s;
     }
 
     @media(max-width: 980px){
         width: 70%;
     }
 
+    @keyframes rotation {
+        0% {
+            transform: rotate(${props => props.rot ? `${props.rot}` : "0deg"})
+        }
+        50% {
+            transform: rotate(${props => props.rot ? `${props.rot}` : "-8deg"})
+        }
+        100% {
+            transform: rotate(${props => props.rot ? `${props.rot}` : "0deg"})
+        }
+    }
 `

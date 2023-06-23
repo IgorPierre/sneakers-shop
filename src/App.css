@@ -40,5 +40,9 @@
     margin: 1rem;
     padding: .3rem  .5rem;
     border: none;
+}
 
+.link-sem-estilo {
+    text-decoration: none;
+    color: inherit;
 }

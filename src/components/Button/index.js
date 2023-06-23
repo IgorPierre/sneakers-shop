@@ -9,7 +9,7 @@ export const Button = styled.button`
 
     border: none;
 
-    padding: 10px 2rem;
+    padding: 8px 2rem;
     margin-top: 15px;
 
     cursor: pointer;
@@ -29,14 +29,14 @@ export const Quantity = styled.div`
     color: #393E59;
     text-align: center;
     border: #393E59 2px solid;
-    padding: 5px 1rem;
+    padding: 4px 1rem;
 
     width: 30%;
 
     input {
         background-color: #F2F2F2;
         color: #393E59;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 700;
 
         max-width: 50px;

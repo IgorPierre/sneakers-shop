@@ -10,12 +10,13 @@ import { DetailsArea, DetailsContent } from "./styles"
 import { Button, Quantity } from "../../components/Button";
 
 //Images
-import generalpurposeshoe from "../../assets/images/generalpurposeshoe.webp"
-import boost350 from "../../assets/images/boost350.png"
-import wmmnsdunklow from "../../assets/images/wmmnsdunklow.png"
-import midse from "../../assets/images/midse.webp"
-import boost700 from "../../assets/images/boost700.png"
-import s5retro from "../../assets/images/s5retro.webp"
+import Zion from "../../assets/images/Zion.png"
+import DUNKJUMBO from "../../assets/images/DUNKJUMBO.png"
+import Humara from "../../assets/images/Humara.png"
+import Max97 from "../../assets/images/Max97.png"
+import Max186 from "../../assets/images/Max186.png"
+import Mindbody from "../../assets/images/Mindbody.png"
+
 
 //Icons
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai"
@@ -39,17 +40,17 @@ function Details(){
     }
 
     function searchImage(name) {
-        if(name === "generalpurposeshoe") return generalpurposeshoe
-        else if(name === "boost350v2") return boost350 
-        else if(name === "midse") return midse
-        else if(name === "s5retro") return s5retro
-        else if(name === "wmmnsdunklow") return wmmnsdunklow
-        else if(name === "boost700") return boost700
+        if(name === "Zion") return Zion
+        else if(name === "DUNKJUMBO") return DUNKJUMBO 
+        else if(name === "Humara") return Humara
+        else if(name === "Max97") return Max97
+        else if(name === "Max186") return Max186
+        else if(name === "Mindbody") return Mindbody
     }
+
 
     return(
         <DetailsArea>
-            
             <Link to={"/"}>
                 <ImArrowLeft/>
             </Link>
